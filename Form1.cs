@@ -1,3 +1,6 @@
+using System;
+using System.Diagnostics;
+using System.Threading;
 /**
  * This project is an attempt to replicate the game 'minesweeper' 
  * there are 100 cells total and a portion of those cells contain a hidden bomb
@@ -23,6 +26,8 @@ namespace MatrixProjectUI {
         int bombCount = 0;
         int flagCount = 0;
 
+        Stopwatch clock = new Stopwatch();
+
         /**
          * This method does all of the building and setup for the game
          * Creates the matrix of safe/bomb spaces
@@ -31,6 +36,7 @@ namespace MatrixProjectUI {
          */
         public Form1() {
             InitializeComponent();
+            clock.Start();
             flowLayoutPanel1.Controls.CopyTo(buttonArray, 0);
 
             //builds game grid, bombs, etc.
@@ -97,6 +103,7 @@ namespace MatrixProjectUI {
             label1.Text = "Total Bombs: " + bombCount;
             label2.Text = "Flags: " + flagCount;
         }
+
 
         /**
          * This method builds the flow layout. Responsible for houseing the 100 buttons and their data. 
@@ -320,5 +327,10 @@ namespace MatrixProjectUI {
                 }
             }
         }
+
+        public void updateTime() {
+            label3.Text = clock.Elapsed.TotalSeconds.ToString();
+        }
+
     }
 }
