@@ -1,7 +1,6 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-//using Timer = System.Windows.Forms.Timer; //?
 /**
 * This project is an attempt to replicate the game 'minesweeper' 
 * there are 100 cells total and a portion of those cells contain a hidden bomb
@@ -37,6 +36,7 @@ namespace MatrixProjectUI {
 
                 //end the game
                 label1.Text = "GAME OVER";
+                timer.Stop();
                 for (int i = 0; i < buttonArray.Length; i++) {
                     if (buttonArray[i].Text.Contains("5")) {
                         buttonArray[i].Text = "X";
@@ -171,6 +171,7 @@ namespace MatrixProjectUI {
             else { //messy code to relate correct button object to data in grid backend. Jankyness due to pre-generated UI that I can't modify
                 if (matrix[int.Parse(btn.Name.Substring(btn.Name.Length - 2, 1)), int.Parse(btn.Name.Substring(btn.Name.Length - 1))] == 5) {
                     label1.Text = "GAME OVER";
+                    timer.Stop();
                     for (int i = 0; i < buttonArray.Length; i++) {
                         if (buttonArray[i].Text.Contains("5")) {
                             buttonArray[i].Text = "X";
@@ -307,6 +308,7 @@ namespace MatrixProjectUI {
                         }
                         if (bombCount == goodFlag) {
                             label1.Text = "YOU WIN!";
+                            timer.Stop();
                             for (int i = 0; i < buttonArray.Length; i++) {
                                 buttonArray[i].Enabled = false;
                                 buttonArray[i].BackColor = Color.White;
@@ -360,6 +362,7 @@ namespace MatrixProjectUI {
                 }
                 if (bombCount == goodFlag) {
                     label1.Text = "YOU WIN!";
+                    timer.Stop();
                     for (int i = 0; i < buttonArray.Length; i++) {
                         buttonArray[i].Enabled = false;
                         buttonArray[i].BackColor = Color.White;
@@ -369,26 +372,3 @@ namespace MatrixProjectUI {
         }
     }
 }
-
-
-/*
- * 
- * 
- * static System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-        static int clock = 0;
-
-        private static void TimerEventProcessor(Object anObject, EventArgs eventArgs) {
-            if (clock >= 120) {
-                timer.Stop();
-                //gameover
-            }
-            else {
-                timer.Stop();
-                timer.Start();
-            }
-            clock++;
-            label3.Text = clock.ToString();
-        }
- * 
- * 
- */
