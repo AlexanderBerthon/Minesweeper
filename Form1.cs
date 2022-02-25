@@ -1,20 +1,21 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
+//using Timer = System.Windows.Forms.Timer; //?
 /**
- * This project is an attempt to replicate the game 'minesweeper' 
- * there are 100 cells total and a portion of those cells contain a hidden bomb
- * the goal of the game is to carefully clear each cell and find the bombs without triggering them
- * when all safe spaces are found, you win
- * if any bomb is triggered, you lose
- * safe cells that are cleared will display hints if there is a bomb nearby, indicated by a number value 0-4
- * a 0 value represents no bombs adjacent to the safe tile while a 4 value means all 4 adjacent tiles are bombs
- * use these hints to clear the board safely and mark all the bombs
- * 
- * The game is currently limited to a 10x10 grid
- * The games difficulty can be changed by modifying the range of the bomb assignment value. located in the grid instantiation section.
- * The more broad the range, the more bombs will be assigned and the harder the game will be.
- */
+* This project is an attempt to replicate the game 'minesweeper' 
+* there are 100 cells total and a portion of those cells contain a hidden bomb
+* the goal of the game is to carefully clear each cell and find the bombs without triggering them
+* when all safe spaces are found, you win
+* if any bomb is triggered, you lose
+* safe cells that are cleared will display hints if there is a bomb nearby, indicated by a number value 0-4
+* a 0 value represents no bombs adjacent to the safe tile while a 4 value means all 4 adjacent tiles are bombs
+* use these hints to clear the board safely and mark all the bombs
+* 
+* The game is currently limited to a 10x10 grid
+* The games difficulty can be changed by modifying the range of the bomb assignment value. located in the grid instantiation section.
+* The more broad the range, the more bombs will be assigned and the harder the game will be.
+*/
 namespace MatrixProjectUI {
     /**
      * This class represents the UI Form, all game code is within this class.. but it could/should be separated into it's own file
@@ -26,8 +27,43 @@ namespace MatrixProjectUI {
         int bombCount = 0;
         int flagCount = 0;
 
-        Stopwatch clock = new Stopwatch();
+        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        int clock = 120;
 
+        private void TimerEventProcessor(Object anObject, EventArgs eventArgs) {
+            clock--;
+            if (clock <= 0) {
+                timer.Stop();
+
+                //end the game
+                label1.Text = "GAME OVER";
+                for (int i = 0; i < buttonArray.Length; i++) {
+                    if (buttonArray[i].Text.Contains("5")) {
+                        buttonArray[i].Text = "X";
+                    }
+                    else {
+                        buttonArray[i].Text = "";
+                    }
+                    buttonArray[i].Enabled = false;
+                    buttonArray[i].BackColor = Color.White;
+                }
+
+            }
+            else {
+                //reset event clock
+                timer.Stop();
+                timer.Start();
+            }
+
+            if(clock % 60 < 10) {
+                label3.Text = clock / 60 + ":0" + clock % 60;
+            }
+            else {
+                label3.Text = clock / 60 + ":" + clock % 60;
+            }
+        }
+
+       
         /**
          * This method does all of the building and setup for the game
          * Creates the matrix of safe/bomb spaces
@@ -36,7 +72,9 @@ namespace MatrixProjectUI {
          */
         public Form1() {
             InitializeComponent();
-            clock.Start();
+            timer.Interval = 1000;
+            timer.Start();
+            timer.Tick += new EventHandler(TimerEventProcessor);
             flowLayoutPanel1.Controls.CopyTo(buttonArray, 0);
 
             //builds game grid, bombs, etc.
@@ -111,6 +149,8 @@ namespace MatrixProjectUI {
          */
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e) {
         }
+
+
 
         /**
          * This method is responsible for a majority of the work / gameplay. 
@@ -327,10 +367,28 @@ namespace MatrixProjectUI {
                 }
             }
         }
-
-        public void updateTime() {
-            label3.Text = clock.Elapsed.TotalSeconds.ToString();
-        }
-
     }
 }
+
+
+/*
+ * 
+ * 
+ * static System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        static int clock = 0;
+
+        private static void TimerEventProcessor(Object anObject, EventArgs eventArgs) {
+            if (clock >= 120) {
+                timer.Stop();
+                //gameover
+            }
+            else {
+                timer.Stop();
+                timer.Start();
+            }
+            clock++;
+            label3.Text = clock.ToString();
+        }
+ * 
+ * 
+ */
