@@ -127,6 +127,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.GameOverLabel = new System.Windows.Forms.Label();
+            this.PlayAgainLabel = new System.Windows.Forms.Label();
+            this.ContinueButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1366,11 +1370,68 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "2:00";
             // 
+            // GameOverLabel
+            // 
+            this.GameOverLabel.AutoSize = true;
+            this.GameOverLabel.Location = new System.Drawing.Point(24, 342);
+            this.GameOverLabel.Name = "GameOverLabel";
+            this.GameOverLabel.Size = new System.Drawing.Size(57, 15);
+            this.GameOverLabel.TabIndex = 4;
+            this.GameOverLabel.Text = "You Lose!";
+            this.GameOverLabel.Visible = false;
+            // 
+            // PlayAgainLabel
+            // 
+            this.PlayAgainLabel.AutoSize = true;
+            this.PlayAgainLabel.Location = new System.Drawing.Point(137, 342);
+            this.PlayAgainLabel.Name = "PlayAgainLabel";
+            this.PlayAgainLabel.Size = new System.Drawing.Size(68, 15);
+            this.PlayAgainLabel.TabIndex = 5;
+            this.PlayAgainLabel.Text = "Play Again?";
+            this.PlayAgainLabel.Visible = false;
+            // 
+            // ContinueButton
+            // 
+            this.ContinueButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ContinueButton.FlatAppearance.BorderSize = 0;
+            this.ContinueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ContinueButton.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.ContinueButton.Location = new System.Drawing.Point(220, 339);
+            this.ContinueButton.Margin = new System.Windows.Forms.Padding(0);
+            this.ContinueButton.Name = "ContinueButton";
+            this.ContinueButton.Size = new System.Drawing.Size(50, 20);
+            this.ContinueButton.TabIndex = 6;
+            this.ContinueButton.Text = "Yes";
+            this.ContinueButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ContinueButton.UseVisualStyleBackColor = false;
+            this.ContinueButton.Visible = false;
+            this.ContinueButton.Click += new System.EventHandler(this.ContinueButton_Click);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExitButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ExitButton.Location = new System.Drawing.Point(279, 339);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(50, 20);
+            this.ExitButton.TabIndex = 7;
+            this.ExitButton.Text = "No";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Visible = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 361);
+            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.ContinueButton);
+            this.Controls.Add(this.PlayAgainLabel);
+            this.Controls.Add(this.GameOverLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -1489,5 +1550,9 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Label GameOverLabel;
+        private Label PlayAgainLabel;
+        private Button ContinueButton;
+        private Button ExitButton;
     }
 }

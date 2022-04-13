@@ -35,7 +35,11 @@ namespace MatrixProjectUI {
                 timer.Stop();
 
                 //end the game
-                label1.Text = "GAME OVER";
+                GameOverLabel.Text = "YOU LOSE!";
+                GameOverLabel.Visible = true;
+                PlayAgainLabel.Visible = true;
+                ContinueButton.Visible = true;
+                ExitButton.Visible = true;
                 timer.Stop();
                 for (int i = 0; i < buttonArray.Length; i++) {
                     if (buttonArray[i].Text.Contains("5")) {
@@ -76,11 +80,11 @@ namespace MatrixProjectUI {
             timer.Start();
             timer.Tick += new EventHandler(TimerEventProcessor);
             flowLayoutPanel1.Controls.CopyTo(buttonArray, 0);
-
+            
             //builds game grid, bombs, etc.
             for (int i = 0; i < 10; i++) {
                 for (int j = 0; j < 10; j++) {
-                    if (random.Next(100) < 25) { //difficulty setting
+                    if (random.Next(100) < 30) { //difficulty setting
                         matrix.SetValue(5, i, j);
                         bombCount++; 
                     }
@@ -89,6 +93,7 @@ namespace MatrixProjectUI {
                     }
                 }
             }
+            
             //solves the game grid, assigns values to non-bomb spaces based on proximity
             for (int i = 0; i < Math.Sqrt(matrix.Length); i++) {
                 for (int j = 0; j < Math.Sqrt(matrix.Length); j++) {
@@ -142,7 +147,6 @@ namespace MatrixProjectUI {
             label2.Text = "Flags: " + flagCount;
         }
 
-
         /**
          * This method builds the flow layout. Responsible for houseing the 100 buttons and their data. 
          * Important to build but I don't need to modify it in any way, so no extra code within.
@@ -170,7 +174,11 @@ namespace MatrixProjectUI {
             }
             else { //messy code to relate correct button object to data in grid backend. Jankyness due to pre-generated UI that I can't modify
                 if (matrix[int.Parse(btn.Name.Substring(btn.Name.Length - 2, 1)), int.Parse(btn.Name.Substring(btn.Name.Length - 1))] == 5) {
-                    label1.Text = "GAME OVER";
+                    GameOverLabel.Text = "YOU LOSE!";
+                    GameOverLabel.Visible = true;
+                    PlayAgainLabel.Visible = true;
+                    ContinueButton.Visible = true;
+                    ExitButton.Visible = true;
                     timer.Stop();
                     for (int i = 0; i < buttonArray.Length; i++) {
                         if (buttonArray[i].Text.Contains("5")) {
@@ -307,7 +315,11 @@ namespace MatrixProjectUI {
                             }
                         }
                         if (bombCount == goodFlag) {
-                            label1.Text = "YOU WIN!";
+                            GameOverLabel.Text = "YOU WIN!";
+                            GameOverLabel.Visible = true;
+                            PlayAgainLabel.Visible = true;
+                            ContinueButton.Visible = true;
+                            ExitButton.Visible = true;
                             timer.Stop();
                             for (int i = 0; i < buttonArray.Length; i++) {
                                 buttonArray[i].Enabled = false;
@@ -361,7 +373,11 @@ namespace MatrixProjectUI {
                     }
                 }
                 if (bombCount == goodFlag) {
-                    label1.Text = "YOU WIN!";
+                    GameOverLabel.Text = "YOU WIN!";
+                    GameOverLabel.Visible = true;
+                    PlayAgainLabel.Visible = true;
+                    ContinueButton.Visible = true;
+                    ExitButton.Visible = true;
                     timer.Stop();
                     for (int i = 0; i < buttonArray.Length; i++) {
                         buttonArray[i].Enabled = false;
@@ -369,6 +385,107 @@ namespace MatrixProjectUI {
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// This function restarts the game without having to re-launch the entire application
+        /// The button that maps this event function is visible at the game over
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ContinueButton_Click(object sender, EventArgs e) {
+            //restart
+            bombCount = 0;
+            flagCount = 0;
+            clock = 120;
+
+            //builds game grid, bombs, etc.
+            for (int i = 0; i < 10; i++) {
+                for (int j = 0; j < 10; j++) {
+                    if (random.Next(100) < 30) { //difficulty setting
+                        matrix.SetValue(5, i, j);
+                        bombCount++;
+                    }
+                    else {
+                        matrix.SetValue(7, i, j); //flag value, needed for next step
+                    }
+                }
+            }
+
+            //solves the game grid, assigns values to non-bomb spaces based on proximity
+            for (int i = 0; i < Math.Sqrt(matrix.Length); i++) {
+                for (int j = 0; j < Math.Sqrt(matrix.Length); j++) {
+                    if (matrix[i, j] == 7) {
+                        matrix[i, j] = 0;
+                        //check 4 adjacent cells
+                        try {
+                            if (matrix[i - 1, j] == 5) {
+                                matrix[i, j]++;
+                            }
+                        }
+                        catch (IndexOutOfRangeException) { }
+                        try {
+                            if (matrix[i, j - 1] == 5) {
+                                matrix[i, j]++;
+                            }
+                        }
+                        catch (IndexOutOfRangeException) { }
+                        try {
+                            if (matrix[i + 1, j] == 5) {
+                                matrix[i, j]++;
+                            }
+                        }
+                        catch (IndexOutOfRangeException) { }
+                        try {
+                            if (matrix[i, j + 1] == 5) {
+                                matrix[i, j]++;
+                            }
+                        }
+                        catch (IndexOutOfRangeException) { }
+                    }
+                }
+            }
+            //Transfers data from int matrix to text on button grid / UI
+            List<String> temp = new List<String>();
+            for (int i = 0; i < Math.Sqrt(matrix.Length); i++) {
+                for (int j = 0; j < Math.Sqrt(matrix.Length); j++) {
+                    temp.Add("" + matrix[i, j]);
+                }
+            }
+
+            for (int i = 0; i < temp.Count; i++) {
+                if (temp[i] == "0") {
+                    buttonArray[i].Text = "?  ";
+                }
+                else {
+                    buttonArray[i].Text = "? " + temp[i];
+                }
+            }
+            label1.Text = "Total Bombs: " + bombCount;
+            label2.Text = "Flags: " + flagCount;
+            label3.Text = "2:00";
+
+            GameOverLabel.Visible = false;
+            PlayAgainLabel.Visible = false;
+            ContinueButton.Visible = false;
+            ExitButton.Visible = false;
+
+            for (int i = 0; i < buttonArray.Length; i++) {
+                buttonArray[i].Enabled = true;
+            }
+
+
+            timer.Start();
+        }
+
+        /// <summary>
+        /// This function exits the program when the user selects it. 
+        /// The button that maps this event function is visible at game over.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ExitButton_Click(object sender, EventArgs e) {
+            Application.Exit();
         }
     }
 }
