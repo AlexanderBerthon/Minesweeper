@@ -27,7 +27,7 @@ namespace MatrixProjectUI {
         int flagCount = 0;
 
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-        int clock = 120;
+        int clock; //scales with # of bombs
 
         private void TimerEventProcessor(Object anObject, EventArgs eventArgs) {
             clock--;
@@ -93,7 +93,10 @@ namespace MatrixProjectUI {
                     }
                 }
             }
-            
+
+            //set dynamic time
+            clock = 5 * bombCount;
+
             //solves the game grid, assigns values to non-bomb spaces based on proximity
             for (int i = 0; i < Math.Sqrt(matrix.Length); i++) {
                 for (int j = 0; j < Math.Sqrt(matrix.Length); j++) {
@@ -200,6 +203,7 @@ namespace MatrixProjectUI {
                         label2.Text = "Flags: " + flagCount;
                     }
                     btn.Text = btn.Text.Substring(btn.Text.Length - 1); //reveal current cell
+                    btn.ForeColor = Color.Black; //MEGA TESTING HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     Button nextBtn;
 
                     /**
@@ -356,10 +360,12 @@ namespace MatrixProjectUI {
             if (e.Button == MouseButtons.Right && btn.Text.Length>1) {
                 if (btn.Text.Contains("X")){
                     btn.Text = "?" + btn.Text.Substring(1);
+                    btn.ForeColor = Color.Black;//TESTING
                     flagCount--;
                 }
                 else{
                     btn.Text = "X" + btn.Text.Substring(1);
+                    btn.ForeColor = Color.Black;//TESTING
                     flagCount++;
                 }
                 label2.Text = "Flags: " + flagCount;
@@ -397,7 +403,6 @@ namespace MatrixProjectUI {
             //restart
             bombCount = 0;
             flagCount = 0;
-            clock = 120;
 
             //builds game grid, bombs, etc.
             for (int i = 0; i < 10; i++) {
@@ -411,6 +416,8 @@ namespace MatrixProjectUI {
                     }
                 }
             }
+
+            clock = 5 * bombCount;
 
             //solves the game grid, assigns values to non-bomb spaces based on proximity
             for (int i = 0; i < Math.Sqrt(matrix.Length); i++) {
