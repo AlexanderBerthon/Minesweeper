@@ -244,7 +244,7 @@
             // 
             // button00
             // 
-            this.button00.ForeColor = System.Drawing.Color.Red;
+            this.button00.ForeColor = System.Drawing.Color.Firebrick;
             this.button00.Location = new System.Drawing.Point(3, 3);
             this.button00.Name = "button00";
             this.button00.Size = new System.Drawing.Size(25, 25);
@@ -256,7 +256,7 @@
             // 
             // button01
             // 
-            this.button01.ForeColor = System.Drawing.Color.Red;
+            this.button01.ForeColor = System.Drawing.Color.Firebrick;
             this.button01.Location = new System.Drawing.Point(34, 3);
             this.button01.Name = "button01";
             this.button01.Size = new System.Drawing.Size(25, 25);
@@ -268,7 +268,7 @@
             // 
             // button02
             // 
-            this.button02.ForeColor = System.Drawing.Color.Red;
+            this.button02.ForeColor = System.Drawing.Color.Firebrick;
             this.button02.Location = new System.Drawing.Point(65, 3);
             this.button02.Name = "button02";
             this.button02.Size = new System.Drawing.Size(25, 25);
@@ -280,7 +280,7 @@
             // 
             // button03
             // 
-            this.button03.ForeColor = System.Drawing.Color.Red;
+            this.button03.ForeColor = System.Drawing.Color.Firebrick;
             this.button03.Location = new System.Drawing.Point(96, 3);
             this.button03.Name = "button03";
             this.button03.Size = new System.Drawing.Size(25, 25);
@@ -292,7 +292,7 @@
             // 
             // button04
             // 
-            this.button04.ForeColor = System.Drawing.Color.Red;
+            this.button04.ForeColor = System.Drawing.Color.Firebrick;
             this.button04.Location = new System.Drawing.Point(127, 3);
             this.button04.Name = "button04";
             this.button04.Size = new System.Drawing.Size(25, 25);
@@ -304,7 +304,7 @@
             // 
             // button05
             // 
-            this.button05.ForeColor = System.Drawing.Color.Red;
+            this.button05.ForeColor = System.Drawing.Color.Firebrick;
             this.button05.Location = new System.Drawing.Point(158, 3);
             this.button05.Name = "button05";
             this.button05.Size = new System.Drawing.Size(25, 25);
@@ -316,7 +316,7 @@
             // 
             // button06
             // 
-            this.button06.ForeColor = System.Drawing.Color.Red;
+            this.button06.ForeColor = System.Drawing.Color.Firebrick;
             this.button06.Location = new System.Drawing.Point(189, 3);
             this.button06.Name = "button06";
             this.button06.Size = new System.Drawing.Size(25, 25);
@@ -328,7 +328,7 @@
             // 
             // button07
             // 
-            this.button07.ForeColor = System.Drawing.Color.Red;
+            this.button07.ForeColor = System.Drawing.Color.Firebrick;
             this.button07.Location = new System.Drawing.Point(220, 3);
             this.button07.Name = "button07";
             this.button07.Size = new System.Drawing.Size(25, 25);
@@ -340,7 +340,7 @@
             // 
             // button08
             // 
-            this.button08.ForeColor = System.Drawing.Color.Red;
+            this.button08.ForeColor = System.Drawing.Color.Firebrick;
             this.button08.Location = new System.Drawing.Point(251, 3);
             this.button08.Name = "button08";
             this.button08.Size = new System.Drawing.Size(25, 25);
@@ -352,7 +352,7 @@
             // 
             // button09
             // 
-            this.button09.ForeColor = System.Drawing.Color.Red;
+            this.button09.ForeColor = System.Drawing.Color.Firebrick;
             this.button09.Location = new System.Drawing.Point(282, 3);
             this.button09.Name = "button09";
             this.button09.Size = new System.Drawing.Size(25, 25);
@@ -364,7 +364,7 @@
             // 
             // button10
             // 
-            this.button10.ForeColor = System.Drawing.Color.Red;
+            this.button10.ForeColor = System.Drawing.Color.Firebrick;
             this.button10.Location = new System.Drawing.Point(3, 34);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(25, 25);
@@ -376,7 +376,7 @@
             // 
             // button11
             // 
-            this.button11.ForeColor = System.Drawing.Color.Red;
+            this.button11.ForeColor = System.Drawing.Color.Firebrick;
             this.button11.Location = new System.Drawing.Point(34, 34);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(25, 25);
@@ -388,7 +388,7 @@
             // 
             // button12
             // 
-            this.button12.ForeColor = System.Drawing.Color.Red;
+            this.button12.ForeColor = System.Drawing.Color.Firebrick;
             this.button12.Location = new System.Drawing.Point(65, 34);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(25, 25);
@@ -400,7 +400,7 @@
             // 
             // button13
             // 
-            this.button13.ForeColor = System.Drawing.Color.Red;
+            this.button13.ForeColor = System.Drawing.Color.Firebrick;
             this.button13.Location = new System.Drawing.Point(96, 34);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(25, 25);
@@ -412,7 +412,7 @@
             // 
             // button14
             // 
-            this.button14.ForeColor = System.Drawing.Color.Red;
+            this.button14.ForeColor = System.Drawing.Color.Firebrick;
             this.button14.Location = new System.Drawing.Point(127, 34);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(25, 25);
@@ -424,7 +424,7 @@
             // 
             // button15
             // 
-            this.button15.ForeColor = System.Drawing.Color.Red;
+            this.button15.ForeColor = System.Drawing.Color.Firebrick;
             this.button15.Location = new System.Drawing.Point(158, 34);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(25, 25);
@@ -436,7 +436,7 @@
             // 
             // button16
             // 
-            this.button16.ForeColor = System.Drawing.Color.Red;
+            this.button16.ForeColor = System.Drawing.Color.Firebrick;
             this.button16.Location = new System.Drawing.Point(189, 34);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(25, 25);
@@ -448,7 +448,7 @@
             // 
             // button17
             // 
-            this.button17.ForeColor = System.Drawing.Color.Red;
+            this.button17.ForeColor = System.Drawing.Color.Firebrick;
             this.button17.Location = new System.Drawing.Point(220, 34);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(25, 25);
@@ -460,7 +460,7 @@
             // 
             // button18
             // 
-            this.button18.ForeColor = System.Drawing.Color.Red;
+            this.button18.ForeColor = System.Drawing.Color.Firebrick;
             this.button18.Location = new System.Drawing.Point(251, 34);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(25, 25);
@@ -472,7 +472,7 @@
             // 
             // button19
             // 
-            this.button19.ForeColor = System.Drawing.Color.Red;
+            this.button19.ForeColor = System.Drawing.Color.Firebrick;
             this.button19.Location = new System.Drawing.Point(282, 34);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(25, 25);
@@ -484,6 +484,7 @@
             // 
             // button20
             // 
+            this.button20.ForeColor = System.Drawing.Color.Firebrick;
             this.button20.Location = new System.Drawing.Point(3, 65);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(25, 25);
@@ -495,6 +496,7 @@
             // 
             // button21
             // 
+            this.button21.ForeColor = System.Drawing.Color.Firebrick;
             this.button21.Location = new System.Drawing.Point(34, 65);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(25, 25);
@@ -506,6 +508,7 @@
             // 
             // button22
             // 
+            this.button22.ForeColor = System.Drawing.Color.Firebrick;
             this.button22.Location = new System.Drawing.Point(65, 65);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(25, 25);
@@ -517,6 +520,7 @@
             // 
             // button23
             // 
+            this.button23.ForeColor = System.Drawing.Color.Firebrick;
             this.button23.Location = new System.Drawing.Point(96, 65);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(25, 25);
@@ -528,6 +532,7 @@
             // 
             // button24
             // 
+            this.button24.ForeColor = System.Drawing.Color.Firebrick;
             this.button24.Location = new System.Drawing.Point(127, 65);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(25, 25);
@@ -539,6 +544,7 @@
             // 
             // button25
             // 
+            this.button25.ForeColor = System.Drawing.Color.Firebrick;
             this.button25.Location = new System.Drawing.Point(158, 65);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(25, 25);
@@ -550,6 +556,7 @@
             // 
             // button26
             // 
+            this.button26.ForeColor = System.Drawing.Color.Firebrick;
             this.button26.Location = new System.Drawing.Point(189, 65);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(25, 25);
@@ -561,6 +568,7 @@
             // 
             // button27
             // 
+            this.button27.ForeColor = System.Drawing.Color.Firebrick;
             this.button27.Location = new System.Drawing.Point(220, 65);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(25, 25);
@@ -572,6 +580,7 @@
             // 
             // button28
             // 
+            this.button28.ForeColor = System.Drawing.Color.Firebrick;
             this.button28.Location = new System.Drawing.Point(251, 65);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(25, 25);
@@ -583,6 +592,7 @@
             // 
             // button29
             // 
+            this.button29.ForeColor = System.Drawing.Color.Firebrick;
             this.button29.Location = new System.Drawing.Point(282, 65);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(25, 25);
@@ -594,6 +604,7 @@
             // 
             // button30
             // 
+            this.button30.ForeColor = System.Drawing.Color.Firebrick;
             this.button30.Location = new System.Drawing.Point(3, 96);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(25, 25);
@@ -605,6 +616,7 @@
             // 
             // button31
             // 
+            this.button31.ForeColor = System.Drawing.Color.Firebrick;
             this.button31.Location = new System.Drawing.Point(34, 96);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(25, 25);
@@ -616,6 +628,7 @@
             // 
             // button32
             // 
+            this.button32.ForeColor = System.Drawing.Color.Firebrick;
             this.button32.Location = new System.Drawing.Point(65, 96);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(25, 25);
@@ -627,6 +640,7 @@
             // 
             // button33
             // 
+            this.button33.ForeColor = System.Drawing.Color.Firebrick;
             this.button33.Location = new System.Drawing.Point(96, 96);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(25, 25);
@@ -638,6 +652,7 @@
             // 
             // button34
             // 
+            this.button34.ForeColor = System.Drawing.Color.Firebrick;
             this.button34.Location = new System.Drawing.Point(127, 96);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(25, 25);
@@ -649,6 +664,7 @@
             // 
             // button35
             // 
+            this.button35.ForeColor = System.Drawing.Color.Firebrick;
             this.button35.Location = new System.Drawing.Point(158, 96);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(25, 25);
@@ -660,6 +676,7 @@
             // 
             // button36
             // 
+            this.button36.ForeColor = System.Drawing.Color.Firebrick;
             this.button36.Location = new System.Drawing.Point(189, 96);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(25, 25);
@@ -671,6 +688,7 @@
             // 
             // button37
             // 
+            this.button37.ForeColor = System.Drawing.Color.Firebrick;
             this.button37.Location = new System.Drawing.Point(220, 96);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(25, 25);
@@ -682,6 +700,7 @@
             // 
             // button38
             // 
+            this.button38.ForeColor = System.Drawing.Color.Firebrick;
             this.button38.Location = new System.Drawing.Point(251, 96);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(25, 25);
@@ -693,6 +712,7 @@
             // 
             // button39
             // 
+            this.button39.ForeColor = System.Drawing.Color.Firebrick;
             this.button39.Location = new System.Drawing.Point(282, 96);
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(25, 25);
@@ -704,6 +724,7 @@
             // 
             // button40
             // 
+            this.button40.ForeColor = System.Drawing.Color.Firebrick;
             this.button40.Location = new System.Drawing.Point(3, 127);
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(25, 25);
@@ -715,6 +736,7 @@
             // 
             // button41
             // 
+            this.button41.ForeColor = System.Drawing.Color.Firebrick;
             this.button41.Location = new System.Drawing.Point(34, 127);
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(25, 25);
@@ -726,6 +748,7 @@
             // 
             // button42
             // 
+            this.button42.ForeColor = System.Drawing.Color.Firebrick;
             this.button42.Location = new System.Drawing.Point(65, 127);
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(25, 25);
@@ -737,6 +760,7 @@
             // 
             // button43
             // 
+            this.button43.ForeColor = System.Drawing.Color.Firebrick;
             this.button43.Location = new System.Drawing.Point(96, 127);
             this.button43.Name = "button43";
             this.button43.Size = new System.Drawing.Size(25, 25);
@@ -748,6 +772,7 @@
             // 
             // button44
             // 
+            this.button44.ForeColor = System.Drawing.Color.Firebrick;
             this.button44.Location = new System.Drawing.Point(127, 127);
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(25, 25);
@@ -759,6 +784,7 @@
             // 
             // button45
             // 
+            this.button45.ForeColor = System.Drawing.Color.Firebrick;
             this.button45.Location = new System.Drawing.Point(158, 127);
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(25, 25);
@@ -770,6 +796,7 @@
             // 
             // button46
             // 
+            this.button46.ForeColor = System.Drawing.Color.Firebrick;
             this.button46.Location = new System.Drawing.Point(189, 127);
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(25, 25);
@@ -781,6 +808,7 @@
             // 
             // button47
             // 
+            this.button47.ForeColor = System.Drawing.Color.Firebrick;
             this.button47.Location = new System.Drawing.Point(220, 127);
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(25, 25);
@@ -792,6 +820,7 @@
             // 
             // button48
             // 
+            this.button48.ForeColor = System.Drawing.Color.Firebrick;
             this.button48.Location = new System.Drawing.Point(251, 127);
             this.button48.Name = "button48";
             this.button48.Size = new System.Drawing.Size(25, 25);
@@ -803,6 +832,7 @@
             // 
             // button49
             // 
+            this.button49.ForeColor = System.Drawing.Color.Firebrick;
             this.button49.Location = new System.Drawing.Point(282, 127);
             this.button49.Name = "button49";
             this.button49.Size = new System.Drawing.Size(25, 25);
@@ -814,6 +844,7 @@
             // 
             // button50
             // 
+            this.button50.ForeColor = System.Drawing.Color.Firebrick;
             this.button50.Location = new System.Drawing.Point(3, 158);
             this.button50.Name = "button50";
             this.button50.Size = new System.Drawing.Size(25, 25);
@@ -825,6 +856,7 @@
             // 
             // button51
             // 
+            this.button51.ForeColor = System.Drawing.Color.Firebrick;
             this.button51.Location = new System.Drawing.Point(34, 158);
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(25, 25);
@@ -836,6 +868,7 @@
             // 
             // button52
             // 
+            this.button52.ForeColor = System.Drawing.Color.Firebrick;
             this.button52.Location = new System.Drawing.Point(65, 158);
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(25, 25);
@@ -847,6 +880,7 @@
             // 
             // button53
             // 
+            this.button53.ForeColor = System.Drawing.Color.Firebrick;
             this.button53.Location = new System.Drawing.Point(96, 158);
             this.button53.Name = "button53";
             this.button53.Size = new System.Drawing.Size(25, 25);
@@ -858,6 +892,7 @@
             // 
             // button54
             // 
+            this.button54.ForeColor = System.Drawing.Color.Firebrick;
             this.button54.Location = new System.Drawing.Point(127, 158);
             this.button54.Name = "button54";
             this.button54.Size = new System.Drawing.Size(25, 25);
@@ -869,6 +904,7 @@
             // 
             // button55
             // 
+            this.button55.ForeColor = System.Drawing.Color.Firebrick;
             this.button55.Location = new System.Drawing.Point(158, 158);
             this.button55.Name = "button55";
             this.button55.Size = new System.Drawing.Size(25, 25);
@@ -880,6 +916,7 @@
             // 
             // button56
             // 
+            this.button56.ForeColor = System.Drawing.Color.Firebrick;
             this.button56.Location = new System.Drawing.Point(189, 158);
             this.button56.Name = "button56";
             this.button56.Size = new System.Drawing.Size(25, 25);
@@ -891,6 +928,7 @@
             // 
             // button57
             // 
+            this.button57.ForeColor = System.Drawing.Color.Firebrick;
             this.button57.Location = new System.Drawing.Point(220, 158);
             this.button57.Name = "button57";
             this.button57.Size = new System.Drawing.Size(25, 25);
@@ -902,6 +940,7 @@
             // 
             // button58
             // 
+            this.button58.ForeColor = System.Drawing.Color.Firebrick;
             this.button58.Location = new System.Drawing.Point(251, 158);
             this.button58.Name = "button58";
             this.button58.Size = new System.Drawing.Size(25, 25);
@@ -913,6 +952,7 @@
             // 
             // button59
             // 
+            this.button59.ForeColor = System.Drawing.Color.Firebrick;
             this.button59.Location = new System.Drawing.Point(282, 158);
             this.button59.Name = "button59";
             this.button59.Size = new System.Drawing.Size(25, 25);
@@ -924,6 +964,7 @@
             // 
             // button60
             // 
+            this.button60.ForeColor = System.Drawing.Color.Firebrick;
             this.button60.Location = new System.Drawing.Point(3, 189);
             this.button60.Name = "button60";
             this.button60.Size = new System.Drawing.Size(25, 25);
@@ -935,6 +976,7 @@
             // 
             // button61
             // 
+            this.button61.ForeColor = System.Drawing.Color.Firebrick;
             this.button61.Location = new System.Drawing.Point(34, 189);
             this.button61.Name = "button61";
             this.button61.Size = new System.Drawing.Size(25, 25);
@@ -946,6 +988,7 @@
             // 
             // button62
             // 
+            this.button62.ForeColor = System.Drawing.Color.Firebrick;
             this.button62.Location = new System.Drawing.Point(65, 189);
             this.button62.Name = "button62";
             this.button62.Size = new System.Drawing.Size(25, 25);
@@ -957,6 +1000,7 @@
             // 
             // button63
             // 
+            this.button63.ForeColor = System.Drawing.Color.Firebrick;
             this.button63.Location = new System.Drawing.Point(96, 189);
             this.button63.Name = "button63";
             this.button63.Size = new System.Drawing.Size(25, 25);
@@ -968,6 +1012,7 @@
             // 
             // button64
             // 
+            this.button64.ForeColor = System.Drawing.Color.Firebrick;
             this.button64.Location = new System.Drawing.Point(127, 189);
             this.button64.Name = "button64";
             this.button64.Size = new System.Drawing.Size(25, 25);
@@ -979,6 +1024,7 @@
             // 
             // button65
             // 
+            this.button65.ForeColor = System.Drawing.Color.Firebrick;
             this.button65.Location = new System.Drawing.Point(158, 189);
             this.button65.Name = "button65";
             this.button65.Size = new System.Drawing.Size(25, 25);
@@ -990,6 +1036,7 @@
             // 
             // button66
             // 
+            this.button66.ForeColor = System.Drawing.Color.Firebrick;
             this.button66.Location = new System.Drawing.Point(189, 189);
             this.button66.Name = "button66";
             this.button66.Size = new System.Drawing.Size(25, 25);
@@ -1001,6 +1048,7 @@
             // 
             // button67
             // 
+            this.button67.ForeColor = System.Drawing.Color.Firebrick;
             this.button67.Location = new System.Drawing.Point(220, 189);
             this.button67.Name = "button67";
             this.button67.Size = new System.Drawing.Size(25, 25);
@@ -1012,6 +1060,7 @@
             // 
             // button68
             // 
+            this.button68.ForeColor = System.Drawing.Color.Firebrick;
             this.button68.Location = new System.Drawing.Point(251, 189);
             this.button68.Name = "button68";
             this.button68.Size = new System.Drawing.Size(25, 25);
@@ -1023,6 +1072,7 @@
             // 
             // button69
             // 
+            this.button69.ForeColor = System.Drawing.Color.Firebrick;
             this.button69.Location = new System.Drawing.Point(282, 189);
             this.button69.Name = "button69";
             this.button69.Size = new System.Drawing.Size(25, 25);
@@ -1034,6 +1084,7 @@
             // 
             // button70
             // 
+            this.button70.ForeColor = System.Drawing.Color.Firebrick;
             this.button70.Location = new System.Drawing.Point(3, 220);
             this.button70.Name = "button70";
             this.button70.Size = new System.Drawing.Size(25, 25);
@@ -1045,6 +1096,7 @@
             // 
             // button71
             // 
+            this.button71.ForeColor = System.Drawing.Color.Firebrick;
             this.button71.Location = new System.Drawing.Point(34, 220);
             this.button71.Name = "button71";
             this.button71.Size = new System.Drawing.Size(25, 25);
@@ -1056,6 +1108,7 @@
             // 
             // button72
             // 
+            this.button72.ForeColor = System.Drawing.Color.Firebrick;
             this.button72.Location = new System.Drawing.Point(65, 220);
             this.button72.Name = "button72";
             this.button72.Size = new System.Drawing.Size(25, 25);
@@ -1067,6 +1120,7 @@
             // 
             // button73
             // 
+            this.button73.ForeColor = System.Drawing.Color.Firebrick;
             this.button73.Location = new System.Drawing.Point(96, 220);
             this.button73.Name = "button73";
             this.button73.Size = new System.Drawing.Size(25, 25);
@@ -1078,6 +1132,7 @@
             // 
             // button74
             // 
+            this.button74.ForeColor = System.Drawing.Color.Firebrick;
             this.button74.Location = new System.Drawing.Point(127, 220);
             this.button74.Name = "button74";
             this.button74.Size = new System.Drawing.Size(25, 25);
@@ -1089,6 +1144,7 @@
             // 
             // button75
             // 
+            this.button75.ForeColor = System.Drawing.Color.Firebrick;
             this.button75.Location = new System.Drawing.Point(158, 220);
             this.button75.Name = "button75";
             this.button75.Size = new System.Drawing.Size(25, 25);
@@ -1100,6 +1156,7 @@
             // 
             // button76
             // 
+            this.button76.ForeColor = System.Drawing.Color.Firebrick;
             this.button76.Location = new System.Drawing.Point(189, 220);
             this.button76.Name = "button76";
             this.button76.Size = new System.Drawing.Size(25, 25);
@@ -1111,6 +1168,7 @@
             // 
             // button77
             // 
+            this.button77.ForeColor = System.Drawing.Color.Firebrick;
             this.button77.Location = new System.Drawing.Point(220, 220);
             this.button77.Name = "button77";
             this.button77.Size = new System.Drawing.Size(25, 25);
@@ -1122,6 +1180,7 @@
             // 
             // button78
             // 
+            this.button78.ForeColor = System.Drawing.Color.Firebrick;
             this.button78.Location = new System.Drawing.Point(251, 220);
             this.button78.Name = "button78";
             this.button78.Size = new System.Drawing.Size(25, 25);
@@ -1133,6 +1192,7 @@
             // 
             // button79
             // 
+            this.button79.ForeColor = System.Drawing.Color.Firebrick;
             this.button79.Location = new System.Drawing.Point(282, 220);
             this.button79.Name = "button79";
             this.button79.Size = new System.Drawing.Size(25, 25);
@@ -1144,6 +1204,7 @@
             // 
             // button80
             // 
+            this.button80.ForeColor = System.Drawing.Color.Firebrick;
             this.button80.Location = new System.Drawing.Point(3, 251);
             this.button80.Name = "button80";
             this.button80.Size = new System.Drawing.Size(25, 25);
@@ -1155,6 +1216,7 @@
             // 
             // button81
             // 
+            this.button81.ForeColor = System.Drawing.Color.Firebrick;
             this.button81.Location = new System.Drawing.Point(34, 251);
             this.button81.Name = "button81";
             this.button81.Size = new System.Drawing.Size(25, 25);
@@ -1166,6 +1228,7 @@
             // 
             // button82
             // 
+            this.button82.ForeColor = System.Drawing.Color.Firebrick;
             this.button82.Location = new System.Drawing.Point(65, 251);
             this.button82.Name = "button82";
             this.button82.Size = new System.Drawing.Size(25, 25);
@@ -1177,6 +1240,7 @@
             // 
             // button83
             // 
+            this.button83.ForeColor = System.Drawing.Color.Firebrick;
             this.button83.Location = new System.Drawing.Point(96, 251);
             this.button83.Name = "button83";
             this.button83.Size = new System.Drawing.Size(25, 25);
@@ -1188,6 +1252,7 @@
             // 
             // button84
             // 
+            this.button84.ForeColor = System.Drawing.Color.Firebrick;
             this.button84.Location = new System.Drawing.Point(127, 251);
             this.button84.Name = "button84";
             this.button84.Size = new System.Drawing.Size(25, 25);
@@ -1199,6 +1264,7 @@
             // 
             // button85
             // 
+            this.button85.ForeColor = System.Drawing.Color.Firebrick;
             this.button85.Location = new System.Drawing.Point(158, 251);
             this.button85.Name = "button85";
             this.button85.Size = new System.Drawing.Size(25, 25);
@@ -1210,6 +1276,7 @@
             // 
             // button86
             // 
+            this.button86.ForeColor = System.Drawing.Color.Firebrick;
             this.button86.Location = new System.Drawing.Point(189, 251);
             this.button86.Name = "button86";
             this.button86.Size = new System.Drawing.Size(25, 25);
@@ -1221,6 +1288,7 @@
             // 
             // button87
             // 
+            this.button87.ForeColor = System.Drawing.Color.Firebrick;
             this.button87.Location = new System.Drawing.Point(220, 251);
             this.button87.Name = "button87";
             this.button87.Size = new System.Drawing.Size(25, 25);
@@ -1232,6 +1300,7 @@
             // 
             // button88
             // 
+            this.button88.ForeColor = System.Drawing.Color.Firebrick;
             this.button88.Location = new System.Drawing.Point(251, 251);
             this.button88.Name = "button88";
             this.button88.Size = new System.Drawing.Size(25, 25);
@@ -1243,6 +1312,7 @@
             // 
             // button89
             // 
+            this.button89.ForeColor = System.Drawing.Color.Firebrick;
             this.button89.Location = new System.Drawing.Point(282, 251);
             this.button89.Name = "button89";
             this.button89.Size = new System.Drawing.Size(25, 25);
@@ -1254,6 +1324,7 @@
             // 
             // button90
             // 
+            this.button90.ForeColor = System.Drawing.Color.Firebrick;
             this.button90.Location = new System.Drawing.Point(3, 282);
             this.button90.Name = "button90";
             this.button90.Size = new System.Drawing.Size(25, 25);
@@ -1265,6 +1336,7 @@
             // 
             // button91
             // 
+            this.button91.ForeColor = System.Drawing.Color.Firebrick;
             this.button91.Location = new System.Drawing.Point(34, 282);
             this.button91.Name = "button91";
             this.button91.Size = new System.Drawing.Size(25, 25);
@@ -1276,6 +1348,7 @@
             // 
             // button92
             // 
+            this.button92.ForeColor = System.Drawing.Color.Firebrick;
             this.button92.Location = new System.Drawing.Point(65, 282);
             this.button92.Name = "button92";
             this.button92.Size = new System.Drawing.Size(25, 25);
@@ -1287,6 +1360,7 @@
             // 
             // button93
             // 
+            this.button93.ForeColor = System.Drawing.Color.Firebrick;
             this.button93.Location = new System.Drawing.Point(96, 282);
             this.button93.Name = "button93";
             this.button93.Size = new System.Drawing.Size(25, 25);
@@ -1298,6 +1372,7 @@
             // 
             // button94
             // 
+            this.button94.ForeColor = System.Drawing.Color.Firebrick;
             this.button94.Location = new System.Drawing.Point(127, 282);
             this.button94.Name = "button94";
             this.button94.Size = new System.Drawing.Size(25, 25);
@@ -1309,6 +1384,7 @@
             // 
             // button95
             // 
+            this.button95.ForeColor = System.Drawing.Color.Firebrick;
             this.button95.Location = new System.Drawing.Point(158, 282);
             this.button95.Name = "button95";
             this.button95.Size = new System.Drawing.Size(25, 25);
@@ -1320,6 +1396,7 @@
             // 
             // button96
             // 
+            this.button96.ForeColor = System.Drawing.Color.Firebrick;
             this.button96.Location = new System.Drawing.Point(189, 282);
             this.button96.Name = "button96";
             this.button96.Size = new System.Drawing.Size(25, 25);
@@ -1331,6 +1408,7 @@
             // 
             // button97
             // 
+            this.button97.ForeColor = System.Drawing.Color.Firebrick;
             this.button97.Location = new System.Drawing.Point(220, 282);
             this.button97.Name = "button97";
             this.button97.Size = new System.Drawing.Size(25, 25);
@@ -1342,6 +1420,7 @@
             // 
             // button98
             // 
+            this.button98.ForeColor = System.Drawing.Color.Firebrick;
             this.button98.Location = new System.Drawing.Point(251, 282);
             this.button98.Name = "button98";
             this.button98.Size = new System.Drawing.Size(25, 25);
@@ -1353,6 +1432,7 @@
             // 
             // button99
             // 
+            this.button99.ForeColor = System.Drawing.Color.Firebrick;
             this.button99.Location = new System.Drawing.Point(282, 282);
             this.button99.Name = "button99";
             this.button99.Size = new System.Drawing.Size(25, 25);
