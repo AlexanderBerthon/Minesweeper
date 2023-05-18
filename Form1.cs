@@ -225,6 +225,7 @@ namespace MatrixProjectUI {
                                 label2.Text = "Flags: " + flagCount;
                             }
                             nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
+                            nextBtn.ForeColor = Color.Black; //TESTING
                         }
                     }
                     catch (IndexOutOfRangeException) { }
@@ -236,6 +237,7 @@ namespace MatrixProjectUI {
                                 label2.Text = "Flags: " + flagCount;
                             }
                             nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
+                            nextBtn.ForeColor = Color.Black; //TESTING
                         }
                     }
                     catch (IndexOutOfRangeException) { }
@@ -249,6 +251,7 @@ namespace MatrixProjectUI {
                                     label2.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
+                                nextBtn.ForeColor = Color.Black; //TESTING
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -260,6 +263,7 @@ namespace MatrixProjectUI {
                                     label2.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
+                                nextBtn.ForeColor = Color.Black; //TESTING
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -271,6 +275,7 @@ namespace MatrixProjectUI {
                                     label2.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
+                                nextBtn.ForeColor = Color.Black; //TESTING
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -285,6 +290,7 @@ namespace MatrixProjectUI {
                                     label2.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
+                                nextBtn.ForeColor = Color.Black; //TESTING
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -296,6 +302,7 @@ namespace MatrixProjectUI {
                                     label2.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
+                                nextBtn.ForeColor = Color.Black; //TESTING
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -307,6 +314,7 @@ namespace MatrixProjectUI {
                                     label2.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
+                                nextBtn.ForeColor = Color.Black; //TESTING
                             }
                         }
                         catch (IndexOutOfRangeException) { }
