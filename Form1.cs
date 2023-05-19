@@ -27,7 +27,7 @@ namespace MatrixProjectUI {
         int flagCount = 0;
 
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-        int clock; //scales with # of bombs
+        int clock;
 
         private void TimerEventProcessor(Object anObject, EventArgs eventArgs) {
             clock--;
@@ -203,7 +203,7 @@ namespace MatrixProjectUI {
                         label2.Text = "Flags: " + flagCount;
                     }
                     btn.Text = btn.Text.Substring(btn.Text.Length - 1); //reveal current cell
-                    btn.ForeColor = Color.Black; //MEGA TESTING HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    btn.ForeColor = Color.Black;
                     Button nextBtn;
 
                     /**
@@ -217,6 +217,8 @@ namespace MatrixProjectUI {
                     maybe I could still make a helper function to make this code a bit more readable though..
                     can't. unless you send the button? 
                     */
+
+                    //reveal surrounding cells as needed
                     try {
                         nextBtn = buttonArray[btn.TabIndex - 10];   //top
                         if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
@@ -368,7 +370,7 @@ namespace MatrixProjectUI {
             if (e.Button == MouseButtons.Right && btn.Text.Length>1) {
                 if (btn.Text.Contains("X")){
                     btn.Text = "?" + btn.Text.Substring(1);
-                    btn.ForeColor = Color.Black;//TESTING
+                    btn.ForeColor = Color.Firebrick;//TESTING
                     flagCount--;
                 }
                 else{
@@ -486,6 +488,7 @@ namespace MatrixProjectUI {
             ExitButton.Visible = false;
 
             for (int i = 0; i < buttonArray.Length; i++) {
+                buttonArray[i].ForeColor = Color.Blue;
                 buttonArray[i].Enabled = true;
             }
 
