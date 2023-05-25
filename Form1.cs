@@ -40,17 +40,23 @@ namespace MatrixProjectUI {
                 PlayAgainLabel.Visible = true;
                 ContinueButton.Visible = true;
                 ExitButton.Visible = true;
+                flagCount = 0;
                 timer.Stop();
                 for (int i = 0; i < buttonArray.Length; i++) {
-                    if (buttonArray[i].Text.Contains("5")) {
+                    if (buttonArray[i].Text.Contains("X") && buttonArray[i].Text.Contains("5")) {
+                        buttonArray[i].ForeColor = Color.White;
+                        buttonArray[i].Text = "X";
+                        flagCount += 1;
+                    }
+                    else if (buttonArray[i].Text.Contains("5")) {
+                        buttonArray[i].ForeColor = Color.Firebrick;
                         buttonArray[i].Text = "X";
                     }
                     else {
-                        buttonArray[i].Text = "";
+                        buttonArray[i].Text = " ";
                     }
-                    buttonArray[i].Enabled = false;
-                    buttonArray[i].BackColor = Color.White;
                 }
+                flagCountLabel.Text = "Flags: "+flagCount;
 
             }
             else {
@@ -60,10 +66,10 @@ namespace MatrixProjectUI {
             }
 
             if(clock % 60 < 10) {
-                label3.Text = clock / 60 + ":0" + clock % 60;
+                timerLabel.Text = clock / 60 + ":0" + clock % 60;
             }
             else {
-                label3.Text = clock / 60 + ":" + clock % 60;
+                timerLabel.Text = clock / 60 + ":" + clock % 60;
             }
         }
 
@@ -146,8 +152,8 @@ namespace MatrixProjectUI {
                     buttonArray[i].Text = "? " + temp[i];
                 }
             }
-            label1.Text = "Total Bombs: " + bombCount;
-            label2.Text = "Flags: " + flagCount;
+            bombCountLabel.Text = "Total Bombs: " + bombCount;
+            flagCountLabel.Text = "Flags: " + flagCount;
         }
 
         /**
@@ -182,17 +188,23 @@ namespace MatrixProjectUI {
                     PlayAgainLabel.Visible = true;
                     ContinueButton.Visible = true;
                     ExitButton.Visible = true;
+                    flagCount = 0;
                     timer.Stop();
                     for (int i = 0; i < buttonArray.Length; i++) {
-                        if (buttonArray[i].Text.Contains("5")) {
+                        if (buttonArray[i].Text.Contains("X") && buttonArray[i].Text.Contains("5")) {
+                            buttonArray[i].ForeColor = Color.White;
+                            buttonArray[i].Text = "X";
+                            flagCount += 1;
+                        }
+                        else if (buttonArray[i].Text.Contains("5")) {
+                            buttonArray[i].ForeColor = Color.Firebrick;
                             buttonArray[i].Text = "X";
                         }
                         else {
-                            buttonArray[i].Text = "";
+                            buttonArray[i].Text = " ";
                         }
-                        buttonArray[i].Enabled = false;
-                        buttonArray[i].BackColor = Color.White;
                     }
+                    flagCountLabel.Text = "Flags: " + flagCount;
                 }
                 else {
 
@@ -200,10 +212,10 @@ namespace MatrixProjectUI {
 
                     if (btn.Text.Contains("X")) {
                         flagCount--;
-                        label2.Text = "Flags: " + flagCount;
+                        flagCountLabel.Text = "Flags: " + flagCount;
                     }
                     btn.Text = btn.Text.Substring(btn.Text.Length - 1); //reveal current cell
-                    btn.ForeColor = Color.Black;
+                    btn.ForeColor = Color.White;
                     Button nextBtn;
 
                     /**
@@ -224,10 +236,10 @@ namespace MatrixProjectUI {
                         if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
                             if (nextBtn.Text.Contains("X")) {
                                 flagCount--;
-                                label2.Text = "Flags: " + flagCount;
+                                flagCountLabel.Text = "Flags: " + flagCount;
                             }
                             nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
-                            nextBtn.ForeColor = Color.Black; //TESTING
+                            nextBtn.ForeColor = Color.White;
                         }
                     }
                     catch (IndexOutOfRangeException) { }
@@ -236,10 +248,10 @@ namespace MatrixProjectUI {
                         if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
                             if (nextBtn.Text.Contains("X")) {
                                 flagCount--;
-                                label2.Text = "Flags: " + flagCount;
+                                flagCountLabel.Text = "Flags: " + flagCount;
                             }
                             nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
-                            nextBtn.ForeColor = Color.Black; //TESTING
+                            nextBtn.ForeColor = Color.White;
                         }
                     }
                     catch (IndexOutOfRangeException) { }
@@ -250,10 +262,10 @@ namespace MatrixProjectUI {
                             if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
                                 if (nextBtn.Text.Contains("X")) {
                                     flagCount--;
-                                    label2.Text = "Flags: " + flagCount;
+                                    flagCountLabel.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
-                                nextBtn.ForeColor = Color.Black; //TESTING
+                                nextBtn.ForeColor = Color.White;
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -262,10 +274,10 @@ namespace MatrixProjectUI {
                             if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
                                 if (nextBtn.Text.Contains("X")) {
                                     flagCount--;
-                                    label2.Text = "Flags: " + flagCount;
+                                    flagCountLabel.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
-                                nextBtn.ForeColor = Color.Black; //TESTING
+                                nextBtn.ForeColor = Color.White;
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -274,10 +286,10 @@ namespace MatrixProjectUI {
                             if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
                                 if (nextBtn.Text.Contains("X")) {
                                     flagCount--;
-                                    label2.Text = "Flags: " + flagCount;
+                                    flagCountLabel.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
-                                nextBtn.ForeColor = Color.Black; //TESTING
+                                nextBtn.ForeColor = Color.White;
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -289,10 +301,10 @@ namespace MatrixProjectUI {
                             if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
                                 if (nextBtn.Text.Contains("X")) {
                                     flagCount--;
-                                    label2.Text = "Flags: " + flagCount;
+                                    flagCountLabel.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
-                                nextBtn.ForeColor = Color.Black; //TESTING
+                                nextBtn.ForeColor = Color.White;
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -301,10 +313,10 @@ namespace MatrixProjectUI {
                             if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
                                 if (nextBtn.Text.Contains("X")) {
                                     flagCount--;
-                                    label2.Text = "Flags: " + flagCount;
+                                    flagCountLabel.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
-                                nextBtn.ForeColor = Color.Black; //TESTING
+                                nextBtn.ForeColor = Color.White;
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -313,10 +325,10 @@ namespace MatrixProjectUI {
                             if (matrix[int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 2, 1)), int.Parse(nextBtn.Name.Substring(nextBtn.Name.Length - 1))] != 5) {
                                 if (nextBtn.Text.Contains("X")) {
                                     flagCount--;
-                                    label2.Text = "Flags: " + flagCount;
+                                    flagCountLabel.Text = "Flags: " + flagCount;
                                 }
                                 nextBtn.Text = nextBtn.Text.Substring(nextBtn.Text.Length - 1);
-                                nextBtn.ForeColor = Color.Black; //TESTING
+                                nextBtn.ForeColor = Color.White;
                             }
                         }
                         catch (IndexOutOfRangeException) { }
@@ -335,10 +347,8 @@ namespace MatrixProjectUI {
                             ContinueButton.Visible = true;
                             ExitButton.Visible = true;
                             timer.Stop();
-                            for (int i = 0; i < buttonArray.Length; i++) {
-                                buttonArray[i].Enabled = false;
-                                buttonArray[i].BackColor = Color.White;
-                            }
+                            //flowLayoutPanel1.Enabled = false;
+
                         }
                     }
                 }
@@ -370,15 +380,15 @@ namespace MatrixProjectUI {
             if (e.Button == MouseButtons.Right && btn.Text.Length>1) {
                 if (btn.Text.Contains("X")){
                     btn.Text = "?" + btn.Text.Substring(1);
-                    btn.ForeColor = Color.Firebrick;//TESTING
+                    btn.ForeColor = Color.Firebrick;
                     flagCount--;
                 }
                 else{
                     btn.Text = "X" + btn.Text.Substring(1);
-                    btn.ForeColor = Color.Black;//TESTING
+                    btn.ForeColor = Color.White;
                     flagCount++;
                 }
-                label2.Text = "Flags: " + flagCount;
+                flagCountLabel.Text = "Flags: " + flagCount;
             }
 
             //win condition check
@@ -395,10 +405,8 @@ namespace MatrixProjectUI {
                     ContinueButton.Visible = true;
                     ExitButton.Visible = true;
                     timer.Stop();
-                    for (int i = 0; i < buttonArray.Length; i++) {
-                        buttonArray[i].Enabled = false;
-                        buttonArray[i].BackColor = Color.White;
-                    }
+                    //flowLayoutPanel1.Enabled = false;
+
                 }
             }
         }
@@ -478,9 +486,9 @@ namespace MatrixProjectUI {
                     buttonArray[i].Text = "? " + temp[i];
                 }
             }
-            label1.Text = "Total Bombs: " + bombCount;
-            label2.Text = "Flags: " + flagCount;
-            label3.Text = "2:00";
+            bombCountLabel.Text = "Total Bombs: " + bombCount;
+            flagCountLabel.Text = "Flags: " + flagCount;
+            timerLabel.Text = "2:00";
 
             GameOverLabel.Visible = false;
             PlayAgainLabel.Visible = false;
@@ -488,8 +496,8 @@ namespace MatrixProjectUI {
             ExitButton.Visible = false;
 
             for (int i = 0; i < buttonArray.Length; i++) {
-                buttonArray[i].ForeColor = Color.Blue;
-                buttonArray[i].Enabled = true;
+                buttonArray[i].ForeColor = Color.Firebrick;
+                buttonArray[i].BackColor = Color.FromArgb(30, 30, 30);
             }
 
 
@@ -505,5 +513,6 @@ namespace MatrixProjectUI {
         private void ExitButton_Click(object sender, EventArgs e) {
             Application.Exit();
         }
+
     }
 }
