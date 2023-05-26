@@ -15,7 +15,7 @@ using System.Threading;
 * The games difficulty can be changed by modifying the range of the bomb assignment value. located in the grid instantiation section.
 * The more broad the range, the more bombs will be assigned and the harder the game will be.
 */
-namespace MatrixProjectUI {
+namespace Minesweeper {
     /**
      * This class represents the UI Form, all game code is within this class.. but it could/should be separated into it's own file
      */

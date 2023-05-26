@@ -1,4 +1,4 @@
-﻿namespace MatrixProjectUI {
+﻿namespace Minesweeper {
     partial class Form1 {
         /// <summary>
         ///  Required designer variable.
@@ -1645,7 +1645,7 @@
             this.Controls.Add(this.bombCountLabel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form1";
-            this.Text = "Window";
+            this.Text = "Minesweeper";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
