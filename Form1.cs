@@ -101,7 +101,7 @@ namespace Minesweeper {
             }
 
             //set dynamic time
-            clock = 5 * bombCount;
+            clock = 4 * bombCount;
 
             //solves the game grid, assigns values to non-bomb spaces based on proximity
             for (int i = 0; i < Math.Sqrt(matrix.Length); i++) {
@@ -435,7 +435,7 @@ namespace Minesweeper {
                 }
             }
 
-            clock = 5 * bombCount;
+            clock = 4 * bombCount;
 
             //solves the game grid, assigns values to non-bomb spaces based on proximity
             for (int i = 0; i < Math.Sqrt(matrix.Length); i++) {
