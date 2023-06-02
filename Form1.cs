@@ -1,24 +1,8 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-/**
-* This project is an attempt to replicate the game 'minesweeper' 
-* there are 100 cells total and a portion of those cells contain a hidden bomb
-* the goal of the game is to carefully clear each cell and find the bombs without triggering them
-* when all safe spaces are found, you win
-* if any bomb is triggered, you lose
-* safe cells that are cleared will display hints if there is a bomb nearby, indicated by a number value 0-4
-* a 0 value represents no bombs adjacent to the safe tile while a 4 value means all 4 adjacent tiles are bombs
-* use these hints to clear the board safely and mark all the bombs
-* 
-* The game is currently limited to a 10x10 grid
-* The games difficulty can be changed by modifying the range of the bomb assignment value. located in the grid instantiation section.
-* The more broad the range, the more bombs will be assigned and the harder the game will be.
-*/
+
 namespace Minesweeper {
-    /**
-     * This class represents the UI Form, all game code is within this class.. but it could/should be separated into it's own file
-     */
     public partial class Form1 : Form {
         Button[] buttonArray = new Button[100]; //communication between button UI and int matrix backend
         int[,] matrix = new int[10,10]; //calculation and build
@@ -73,13 +57,6 @@ namespace Minesweeper {
             }
         }
 
-       
-        /**
-         * This method does all of the building and setup for the game
-         * Creates the matrix of safe/bomb spaces
-         * Pre-solves the matrix and hides it from the user
-         * Assigns values to be written to the UI elements
-         */
         public Form1() {
             InitializeComponent();
             timer.Interval = 1000;
@@ -156,32 +133,17 @@ namespace Minesweeper {
             flagCountLabel.Text = "Flags: " + flagCount;
         }
 
-        /**
-         * This method builds the flow layout. Responsible for houseing the 100 buttons and their data. 
-         * Important to build but I don't need to modify it in any way, so no extra code within.
-         */
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e) {
         }
 
-
-
-        /**
-         * This method is responsible for a majority of the work / gameplay. 
-         * It is an event handler method that is run when the user LEFT clicks on a cell
-         * When clicked, the data on the corresponding UI element is retrieved. ie the button / cell
-         * The UI button data is extracted and compared to the matrix to determine what action to take
-         * If the clicked button/cell was a bomb. the game is over and the player loses.
-         * If the clicked button/cell was not a bomb, then that cells information is displayed.
-         * The surrounding 8 cells are also all checked in the same way.
-         * If a surrounding cell is a bomb, it's information is not revealed
-         * If a surrounding cell is not a bomb, it's information is revealed
-         */
+        //player click event handler
         private void button_Click(object sender, EventArgs e) {
-            Button btn = (Button)sender; //can't access sender data without instantiating it. for.. reasons...
+            Button btn = (Button)sender;
+            //clicked on already revealed cell, do nothing to prevent cheating
             if (btn.Text.Length == 1) {
-                //Prevents player from clicking an already revealed cell and gaming the system.
             }
-            else { //messy code to relate correct button object to data in grid backend. Jankyness due to pre-generated UI that I can't modify
+            else {
+                //clicked on a bomb
                 if (matrix[int.Parse(btn.Name.Substring(btn.Name.Length - 2, 1)), int.Parse(btn.Name.Substring(btn.Name.Length - 1))] == 5) {
                     GameOverLabel.Text = "YOU LOSE!";
                     GameOverLabel.Visible = true;
@@ -206,29 +168,20 @@ namespace Minesweeper {
                     }
                     flagCountLabel.Text = "Flags: " + flagCount;
                 }
+                //clicked on a valid cell
                 else {
-
                     int goodFlag = 0;
 
+                    //fixes flag count if player clicks on a cell they marked as a bomb but it wasn't a bomb
                     if (btn.Text.Contains("X")) {
                         flagCount--;
                         flagCountLabel.Text = "Flags: " + flagCount;
                     }
-                    btn.Text = btn.Text.Substring(btn.Text.Length - 1); //reveal current cell
+
+                    //reveal current cell
+                    btn.Text = btn.Text.Substring(btn.Text.Length - 1);
                     btn.ForeColor = Color.White;
                     Button nextBtn;
-
-                    /**
-                    code is messy, but I think this is the 'best' way to do it.
-                    if I made a case:switch statement I could avoid having to run all 8 checks each time
-                    but I would have to repeat the same code even more times, so it would look even worse to save a total of..
-                    math..
-                    9% reduction of if statements from this method.
-                    so.. not really worth it? an if statement check is already basically 0 processing power and O(1)
-                    9% would be a negligible efficiency gain in exchange for an extra 100 lines of code
-                    maybe I could still make a helper function to make this code a bit more readable though..
-                    can't. unless you send the button? 
-                    */
 
                     //reveal surrounding cells as needed
                     try {
@@ -347,8 +300,6 @@ namespace Minesweeper {
                             ContinueButton.Visible = true;
                             ExitButton.Visible = true;
                             timer.Stop();
-                            //flowLayoutPanel1.Enabled = false;
-
                         }
                     }
                 }
@@ -356,21 +307,16 @@ namespace Minesweeper {
         }
 
         /**
-         * This method is responsible for right click / flag functionality
-         * It is an event handler method intentionally separate from the previous _Click handler
+         * right click event handler / flag function
+         * this is an event handler intentionally separate from the previous _Click handler
          * _Click does not support right click actions while _MouseDown does
-         * Left click functionality is kept separate for usability and positive gameplay experience reasons.
-         * By keeping it in the _Click method, left click actions are able to be canceled if the user misclicks or fat fingers a
+         * left click functionality is kept separate to improve gameplay experience
+         * by keeping it in the _Click method, left click actions are able to be canceled if the user misclicks or fat fingers a
          * cell on accident by holding down left click and only releasing it on the cell that they want to play.
          * the _MouseDown method will not allow this flexibility
          * 
-         * The right click funtionality by contrast can be reverted by simply right clicking the cell again, as it is just a visual
-         * flag value and does not reveal any data in and of itself. 
-         * 
-         * As for what this method does exactly, it simply displays a flag value to the user so that they may more easily keep track
-         * of cells they believe to be bombs.
-         * any cell can be marked, even if it is a safe space.
-         * it is up to the player to determine the correct safe and non-safe spaces
+         * the right click funtionality by contrast can be reverted by simply right clicking the cell again, as it is just a visual
+         * flag value and does not reveal any data itself 
          */
         private void Button_MouseDown(object sender, MouseEventArgs e) {
             Button btn = (Button)sender;
@@ -405,20 +351,12 @@ namespace Minesweeper {
                     ContinueButton.Visible = true;
                     ExitButton.Visible = true;
                     timer.Stop();
-                    //flowLayoutPanel1.Enabled = false;
-
                 }
             }
         }
 
-        /// <summary>
-        /// This function restarts the game without having to re-launch the entire application
-        /// The button that maps this event function is visible at the game over
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        //restart game
         private void ContinueButton_Click(object sender, EventArgs e) {
-            //restart
             bombCount = 0;
             flagCount = 0;
 
@@ -504,12 +442,6 @@ namespace Minesweeper {
             timer.Start();
         }
 
-        /// <summary>
-        /// This function exits the program when the user selects it. 
-        /// The button that maps this event function is visible at game over.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ExitButton_Click(object sender, EventArgs e) {
             Application.Exit();
         }
